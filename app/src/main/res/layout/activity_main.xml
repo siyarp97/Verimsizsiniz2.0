@@ -7,179 +7,368 @@
     android:background="#EFEFEF"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="362dp"
-        android:layout_height="344dp"
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="480dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableLayout
+        <!-- 1. Satır -->
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <!-- 1. Satır -->
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_marginRight="15dp"
+                android:background="@drawable/input_box">
 
-                <TableRow
-                    android:layout_width="157dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/input_box">
+                <TextView
+                    android:id="@+id/t1_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="T1"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
 
-                    <TextView
-                        android:id="@+id/t1_TW"
-                        android:layout_width="34dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:background="#0b0b0b"
-                        android:fontFamily="@font/bungee"
-                        android:text="T1"
-                        android:textAlignment="center"
-                        android:textColor="#EFEFEF"
-                        android:textSize="18dp" />
+                <EditText
+                    android:id="@+id/t1"
+                    android:layout_width="121dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
 
-                    <EditText
-                        android:id="@+id/t1"
-                        android:layout_width="121dp"
-                        android:layout_height="49dp"
-                        android:background="@android:color/transparent"
-                        android:ems="10"
+                    android:hint="T1 Gir"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
+            </TableRow>
 
-                        android:hint="T1 Gir"
-                        android:inputType="number"
-                        android:paddingRight="10dp"
-                        android:textAlignment="center"
-                        android:textColor="#D51AA599"
-                        android:textColorHint="#8180CBC4" />
-                </TableRow>
+            <TableRow
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/input_box">
 
-                <TableRow
-                    android:layout_width="171dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/input_box">
+                <TextView
+                    android:id="@+id/t2_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="T2"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
 
-                    <TextView
-                        android:id="@+id/t2_TW"
-                        android:layout_width="34dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:background="#0b0b0b"
-                        android:fontFamily="@font/bungee"
-                        android:text="T2"
-                        android:textAlignment="center"
-                        android:textColor="#EFEFEF"
-                        android:textSize="18dp" />
+                <EditText
+                    android:id="@+id/t2"
+                    android:layout_width="133dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
 
-                    <EditText
-                        android:id="@+id/t2"
-                        android:layout_width="133dp"
-                        android:layout_height="49dp"
-                        android:background="@android:color/transparent"
-                        android:ems="10"
-
-                        android:hint="T2 Gir"
-                        android:inputType="number"
-                        android:paddingRight="10dp"
-                        android:textAlignment="center"
-                        android:textColor="#D51AA599"
-                        android:textColorHint="#8180CBC4" />
-
-                </TableRow>
+                    android:hint="T2 Gir"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
 
             </TableRow>
 
-            <!-- 2. Satıra geçiliyor -->
+        </TableRow>
+
+        <!-- 2. Satıra geçiliyor -->
+
+        <!-- 3.Satıra Geçiliyor -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingTop="10dp">
+                android:layout_marginRight="15dp"
+                android:background="@drawable/input_box">
 
-                <TableRow
-                    android:layout_width="157dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/input_box">
+                <TextView
+                    android:id="@+id/yapilan_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="$"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
 
-                    <TextView
-                        android:id="@+id/yapilan_TW"
-                        android:layout_width="34dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:background="#0b0b0b"
-                        android:fontFamily="@font/bungee"
-                        android:text="$"
-                        android:textAlignment="center"
-                        android:textColor="#EFEFEF"
-                        android:textSize="18dp" />
+                <EditText
+                    android:id="@+id/yapilan"
+                    android:layout_width="121dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
 
-                    <EditText
-                        android:id="@+id/yapilan"
-                        android:layout_width="121dp"
-                        android:layout_height="49dp"
-                        android:background="@android:color/transparent"
-                        android:ems="10"
+                    android:hint="Yapılan TL"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
+            </TableRow>
 
-                        android:hint="Yapılan TL"
-                        android:inputType="number"
-                        android:paddingRight="10dp"
-                        android:textAlignment="center"
-                        android:textColor="#D51AA599"
-                        android:textColorHint="#8180CBC4" />
-                </TableRow>
+            <TableRow
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/input_box">
 
-                <TableRow
-                    android:layout_width="171dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/input_box">
+                <TextView
+                    android:id="@+id/saat_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="⧖"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
 
-                    <TextView
-                        android:id="@+id/saat_TW"
-                        android:layout_width="34dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:background="#0b0b0b"
-                        android:fontFamily="@font/bungee"
-                        android:text="⧖"
-                        android:textAlignment="center"
-                        android:textColor="#EFEFEF"
-                        android:textSize="18dp" />
+                <EditText
+                    android:id="@+id/saat"
+                    android:layout_width="133dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
 
-                    <EditText
-                        android:id="@+id/saat"
-                        android:layout_width="133dp"
-                        android:layout_height="49dp"
-                        android:background="@android:color/transparent"
-                        android:ems="10"
-
-                        android:hint="Saat (bugün)"
-                        android:inputType="number"
-                        android:paddingRight="10dp"
-                        android:textAlignment="center"
-                        android:textColor="#D51AA599"
-                        android:textColorHint="#8180CBC4" />
-
-                </TableRow>
+                    android:hint="Saat (bugün)"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
 
             </TableRow>
 
-            <!-- 3.Satıra Geçildi -->
+        </TableRow>
 
-        </TableLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TableRow
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/input_box">
+
+                <TextView
+                    android:id="@+id/adet_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="№"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/adet"
+                    android:layout_width="121dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+
+                    android:hint="Adet"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/input_box">
+
+                <TextView
+                    android:id="@+id/adetInfo"
+                    android:layout_width="171dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:lineSpacingExtra="8dp"
+                    android:text="Adet verisi için
+                        Excell'e Bak!"
+
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="11dp" />
+
+            </TableRow>
+
+        </TableRow>
+
+        <!-- 4. Satır -->
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TableRow
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/input_box">
+
+                <TextView
+                    android:id="@+id/dun_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="⟲"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/dun"
+                    android:layout_width="121dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+
+                    android:hint="Dün Tarih"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/input_box">
+
+                <TextView
+                    android:id="@+id/bugun_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text=" �"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/bugun"
+                    android:layout_width="133dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+
+                    android:hint="Bugün Tarih"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
+
+            </TableRow>
+
+
+        </TableRow>
+
+        <!-- Son Satır -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TableRow
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/input_box">
+
+                <TextView
+                    android:id="@+id/ayGun_TW"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
+                    android:fontFamily="@font/bungee"
+                    android:text="📅"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/ayGun"
+                    android:layout_width="121dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+
+                    android:hint="Ay Kaç Gün?"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#8180CBC4" />
+            </TableRow>
+
+
+            <Button android:layout_width="78dp">
+
+            </Button>
+
+        </TableRow>
+
+
+    </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
