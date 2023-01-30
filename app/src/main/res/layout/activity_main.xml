@@ -7,16 +7,288 @@
     android:background="#EFEFEF"
     tools:context=".MainActivity">
 
-
+        <!-- Sonuç Kısmı Layout'u-->
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="480dp"
+        android:id="@+id/resultLayout"
+        android:layout_width="392dp"
+        android:layout_height="437dp"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/t1blackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="T1 Hedef:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/t1Sonuc"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/t2blackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="T2 Hedef:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/t2Sonuc"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/adetblackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="Adet Hedef:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/adetSonuc"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/tlVerimblackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="TL Verim:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tlVerim"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/adetVerimblackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="Adet Verim:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/adetVerim"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/t1TamblackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="T1 Tamamlanan:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/t1Tam"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/t2TamblackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="T2 Tamamlanan:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/t2Tam"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/result_design">
+
+            <TextView
+                android:id="@+id/ayTamblackSonuc_TW"
+                android:layout_width="135dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:background="#0b0b0b"
+                android:fontFamily="@font/bungee"
+                android:text="Ay Tamamlanan:"
+                android:textAlignment="center"
+                android:textColor="#EFEFEF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/ayTam"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="@font/bungee"
+                android:text="null"
+                android:textAlignment="center"
+                android:textColor="#0b0b0b"
+                android:textSize="18sp" />
+        </TableRow>
+    </TableLayout>
+
+
+    <!-- Input Kısmı Layout'u-->
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="367dp"
+        android:layout_height="291dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -357,16 +629,45 @@
                     android:textColorHint="#8180CBC4" />
             </TableRow>
 
+            <TableRow
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp">
 
-            <Button android:layout_width="78dp">
 
-            </Button>
+                <Button
+                    android:id="@+id/hesaplaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_effect"
+                    android:fontFamily="@font/bungee"
+                    android:onClick="baslat"
+                    android:text="Hesapla"
+                    android:textColor="#0b0b0b"
+                    android:textSize="12dp"
+                    app:cornerRadius="80dp" />
+            </TableRow>
 
         </TableRow>
 
 
     </TableLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Input Frame View -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="401dp"
+        android:layout_height="337dp"
+        android:background="@drawable/frame"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout2"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 
