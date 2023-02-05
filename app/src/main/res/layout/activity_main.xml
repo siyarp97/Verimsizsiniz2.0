@@ -4,20 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFEF"
+    android:background="#E1E0E0"
     tools:context=".MainActivity">
 
-        <!-- Sonuç Kısmı Layout'u-->
-    <TableLayout
-        android:id="@+id/resultLayout"
-        android:layout_width="392dp"
-        android:layout_height="437dp"
-        android:layout_marginLeft="12dp"
-        android:visibility="gone"
+
+    <!-- Input Frame View -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="376dp"
+        android:layout_height="267dp"
+        android:layout_marginBottom="490dp"
+        android:background="@drawable/frame"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Sonuç Kısmı Layout'u-->
+             <TableLayout
+        android:id="@+id/resultLayout"
+        android:layout_width="380dp"
+        android:layout_height="437dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hesaplaBtn"
+        app:layout_constraintVertical_bias="0.507">
 
         <TableRow
             android:layout_width="match_parent"
@@ -43,7 +60,7 @@
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -75,7 +92,7 @@
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -107,7 +124,7 @@
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -134,12 +151,12 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/tlVerim"
+                android:id="@+id/tlVerimSonuc"
                 android:layout_width="232dp"
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -166,12 +183,12 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/adetVerim"
+                android:id="@+id/adetVerimSonuc"
                 android:layout_width="232dp"
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -204,7 +221,8 @@
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
+                android:paddingTop="10dp"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -237,7 +255,8 @@
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
+                android:paddingTop="10dp"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -270,7 +289,8 @@
                 android:layout_height="46dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:fontFamily="@font/bungee"
+                android:fontFamily="@font/pridi"
+                android:paddingTop="10dp"
                 android:text="null"
                 android:textAlignment="center"
                 android:textColor="#0b0b0b"
@@ -282,15 +302,13 @@
     <!-- Input Kısmı Layout'u-->
     <TableLayout
         android:id="@+id/tableLayout2"
-        android:layout_width="367dp"
-        android:layout_height="291dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="368dp"
+        android:layout_height="237dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        android:paddingLeft="12dp">
 
         <!-- 1. Satır -->
         <TableRow
@@ -301,7 +319,7 @@
             <TableRow
                 android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="4dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -322,19 +340,19 @@
                     android:layout_height="49dp"
                     android:background="@android:color/transparent"
                     android:ems="10"
-
+                    android:fontFamily="@font/pridi"
                     android:hint="T1 Gir"
                     android:inputType="number"
                     android:paddingRight="10dp"
                     android:textAlignment="center"
                     android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
+                    android:textColorHint="#C1252525" />
             </TableRow>
 
             <TableRow
                 android:layout_width="171dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -356,12 +374,13 @@
                     android:background="@android:color/transparent"
                     android:ems="10"
 
+                    android:fontFamily="@font/pridi"
                     android:hint="T2 Gir"
                     android:inputType="number"
                     android:paddingRight="10dp"
                     android:textAlignment="center"
                     android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
+                    android:textColorHint="#C1252525" />
 
             </TableRow>
 
@@ -380,7 +399,7 @@
             <TableRow
                 android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="4dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -402,18 +421,19 @@
                     android:background="@android:color/transparent"
                     android:ems="10"
 
+                    android:fontFamily="@font/pridi"
                     android:hint="Yapılan TL"
                     android:inputType="number"
                     android:paddingRight="10dp"
                     android:textAlignment="center"
                     android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
+                    android:textColorHint="#C1252525" />
             </TableRow>
 
             <TableRow
                 android:layout_width="171dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -435,12 +455,13 @@
                     android:background="@android:color/transparent"
                     android:ems="10"
 
+                    android:fontFamily="@font/pridi"
                     android:hint="Saat (bugün)"
                     android:inputType="number"
                     android:paddingRight="10dp"
                     android:textAlignment="center"
                     android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
+                    android:textColorHint="#C1252525" />
 
             </TableRow>
 
@@ -455,7 +476,7 @@
             <TableRow
                 android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="4dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -476,19 +497,19 @@
                     android:layout_height="49dp"
                     android:background="@android:color/transparent"
                     android:ems="10"
-
+                    android:fontFamily="@font/pridi"
                     android:hint="Adet"
                     android:inputType="number"
                     android:paddingRight="10dp"
                     android:textAlignment="center"
                     android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
+                    android:textColorHint="#C1252525" />
             </TableRow>
 
             <TableRow
                 android:layout_width="171dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -522,84 +543,7 @@
             <TableRow
                 android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/input_box">
-
-                <TextView
-                    android:id="@+id/dun_TW"
-                    android:layout_width="34dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:background="#0b0b0b"
-                    android:fontFamily="@font/bungee"
-                    android:text="⟲"
-                    android:textAlignment="center"
-                    android:textColor="#EFEFEF"
-                    android:textSize="18dp" />
-
-                <EditText
-                    android:id="@+id/dun"
-                    android:layout_width="121dp"
-                    android:layout_height="49dp"
-                    android:background="@android:color/transparent"
-                    android:ems="10"
-
-                    android:hint="Dün Tarih"
-                    android:inputType="number"
-                    android:paddingRight="10dp"
-                    android:textAlignment="center"
-                    android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="171dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/input_box">
-
-                <TextView
-                    android:id="@+id/bugun_TW"
-                    android:layout_width="34dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:background="#0b0b0b"
-                    android:fontFamily="@font/bungee"
-                    android:text=" �"
-                    android:textAlignment="center"
-                    android:textColor="#EFEFEF"
-                    android:textSize="18dp" />
-
-                <EditText
-                    android:id="@+id/bugun"
-                    android:layout_width="133dp"
-                    android:layout_height="49dp"
-                    android:background="@android:color/transparent"
-                    android:ems="10"
-
-                    android:hint="Bugün Tarih"
-                    android:inputType="number"
-                    android:paddingRight="10dp"
-                    android:textAlignment="center"
-                    android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
-
-            </TableRow>
-
-
-        </TableRow>
-
-        <!-- Son Satır -->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="10dp">
-
-            <TableRow
-                android:layout_width="157dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="4dp"
                 android:background="@drawable/input_box">
 
                 <TextView
@@ -621,48 +565,78 @@
                     android:background="@android:color/transparent"
                     android:ems="10"
 
+                    android:fontFamily="@font/pridi"
                     android:hint="Ay Kaç Gün?"
                     android:inputType="number"
                     android:paddingRight="10dp"
                     android:textAlignment="center"
                     android:textColor="#D51AA599"
-                    android:textColorHint="#8180CBC4" />
+                    android:textColorHint="#C1252525" />
             </TableRow>
 
             <TableRow
                 android:layout_width="171dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp">
+                android:layout_marginStart="8dp"
+                android:background="@drawable/input_box">
 
-
-                <Button
-                    android:id="@+id/hesaplaBtn"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/bugun_TW"
+                    android:layout_width="34dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_effect"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0b0b0b"
                     android:fontFamily="@font/bungee"
-                    android:onClick="baslat"
-                    android:text="Hesapla"
-                    android:textColor="#0b0b0b"
-                    android:textSize="12dp"
-                    app:cornerRadius="80dp" />
+                    android:text=" �"
+                    android:textAlignment="center"
+                    android:textColor="#EFEFEF"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/bugun"
+                    android:layout_width="133dp"
+                    android:layout_height="49dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+
+                    android:fontFamily="@font/pridi"
+                    android:hint="Bugün Tarih"
+                    android:inputType="number"
+                    android:paddingRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#D51AA599"
+                    android:textColorHint="#C1252525" />
+
             </TableRow>
+
 
         </TableRow>
 
+        <!-- Son Satır -->
+
 
     </TableLayout>
+<!-- Buton Kısmı -->
+    <Button
+        android:id="@+id/hesaplaBtn"
+        android:layout_width="329dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/btn_effect"
+        android:fontFamily="@font/bungee"
+        android:onClick="baslat"
+        android:text="Hesapla"
+        android:textColor="#0b0b0b"
+        android:textSize="12dp"
+        app:cornerRadius="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Input Frame View -->
-    <View
-        android:id="@+id/view2"
-        android:layout_width="401dp"
-        android:layout_height="337dp"
-        android:background="@drawable/frame"
-        app:layout_constraintBottom_toBottomOf="@+id/tableLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
-        app:layout_constraintStart_toStartOf="@+id/tableLayout2"
-        app:layout_constraintTop_toTopOf="@+id/tableLayout2" />
+
+    <!-- Result Card View Deneme -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

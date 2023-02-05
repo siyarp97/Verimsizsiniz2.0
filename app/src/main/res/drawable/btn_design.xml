@@ -3,7 +3,7 @@
     <solid android:color="@color/buttonColor"/>
     <corners android:radius="15dp"/>
 
-    <solid android:color="@color/cardview_light_background"></solid>
+    <solid android:color="#FFFFFF"></solid>
     <stroke android:color="@color/black"/>
     <stroke android:width="3.5dp"/>
 
